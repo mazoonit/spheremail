@@ -6,23 +6,23 @@ RSpec.describe Person, type: :model do
     
     before {subject.save}
 
-    it 'child sex value must be provided' do
+    it 'is not valid without child sex' do
       subject.person_type="child"
       subject.sex=nil
       expect(subject).to_not be_valid
     end
     
-    it 'father must be male' do
+    it 'is not valid if father is female' do
       subject.sex="female"
       expect(subject).to_not be_valid
     end
 
-    it 'mother must be female' do
+    it 'is not valid if mother is male' do
       subject.person_type="mother"
       expect(subject).to_not be_valid
     end
 
-    it 'Saving into db' do
+    it 'is valid with valid attributes' do
       expect(subject).to be_valid
     end
     

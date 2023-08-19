@@ -9,11 +9,11 @@ RSpec.describe Person, type: :model do
     
     before {subject.save}
 
-    it 'Address must be provided' do
+    it 'is not valid without address' do
       subject.address=nil
       expect(subject).to_not be_valid
     end
-    it 'Saving into db' do
+    it 'is valid with valid attributes' do
       expect(subject).to be_valid
     end
   end
