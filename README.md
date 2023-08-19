@@ -1,5 +1,19 @@
 # SphereMail Task @mazoonit
 
+
+### How to run migrations ?
+- cd to the project dir
+- bin/rails db:migrate
+### How to run RSpec tests ?
+- cd to the project dir
+- rspec
+### How to play with the models ?
+- cd to the project dir
+- bin/rails console
+### How to run the server ? 
+- cd to the project dir
+- bin/rails server
+
 ### Problem
 ##Software Requirements Specification##
 We need to store data about families living in a city. Specifically, we need the following info:
