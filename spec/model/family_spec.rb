@@ -13,4 +13,7 @@ RSpec.describe Person, type: :model do
       subject.address=nil
       expect(subject).to_not be_valid
     end
+    it 'Saving into db' do
+      expect(subject).to be_valid
+    end
   end

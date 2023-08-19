@@ -21,4 +21,9 @@ RSpec.describe Person, type: :model do
       subject.person_type="mother"
       expect(subject).to_not be_valid
     end
+
+    it 'Saving into db' do
+      expect(subject).to be_valid
+    end
+    
   end
