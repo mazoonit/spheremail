@@ -13,7 +13,7 @@ class SexValidator < ActiveModel::Validator
 end
 
 class Person < ApplicationRecord
-  belongs_to :family,foreign_key:'family_id',optional:true
+  belongs_to :family,foreign_key:'family_id'
   enum :sex, {male:0,female:1}
   enum :person_type, {father:0,mother:1,child:2}
   validates :name, presence:true

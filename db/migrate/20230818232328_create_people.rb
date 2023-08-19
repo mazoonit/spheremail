@@ -4,7 +4,7 @@ class CreatePeople < ActiveRecord::Migration[7.0]
       t.string :name
       t.integer :age
       t.integer :sex
-      t.references :family,foreign_key: true
+      t.references :family,null: false,foreign_key: true
 
       t.timestamps
     end

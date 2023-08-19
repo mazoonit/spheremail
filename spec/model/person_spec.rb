@@ -1,6 +1,8 @@
 require 'rails_helper'
 RSpec.describe Person, type: :model do
-    subject {Person.new(name:"mazen",age:55,sex:"male",person_type:"father")}
+    let!(:address) {Address.create(street:"Bayrony",city:"Alexandria",country:"Egypt")}
+    let!(:family){Family.create(address: address)}
+    subject {Person.new(name:"mazen",age:55,sex:"male",person_type:"father",family:family)}
     
     before {subject.save}
 

@@ -27,8 +27,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_19_005551) do
   end
 
   create_table "families", force: :cascade do |t|
-    t.integer "father_id", null: false
-    t.integer "mother_id", null: false
+    t.integer "father_id"
+    t.integer "mother_id"
     t.integer "address_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -41,7 +41,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_19_005551) do
     t.string "name"
     t.integer "age"
     t.integer "sex"
-    t.integer "family_id"
+    t.integer "family_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "person_type"
