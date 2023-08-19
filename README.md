@@ -1,24 +1,20 @@
-# README
+# SphereMail Task @mazoonit
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Problem
+##Software Requirements Specification##
+We need to store data about families living in a city. Specifically, we need the following info:
 
-Things you may want to cover:
+- Name and age of father;
+- Name and age of mother;
+- Name, sex (male, female) and age of each child in the family;
+- House address.
+Implement database and rails models for storing information we need. (Do not implement view and controllers)
 
-* Ruby version
+Business constrains:
 
-* System dependencies
+- Do not allow to store information about family without the house address provided.
+- Do not allow to store information about children without the sex value provided.
 
-* Configuration
+Create RSpec tests to make sure the business constraints are working.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Implement a query that will count how many females and males living in the city.
