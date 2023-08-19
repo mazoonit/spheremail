@@ -41,6 +41,10 @@ RSpec.describe 'Counting Queries' do
       expect(person_count).to eq(3)
     end
     it 'How Many Families have one child?' do
+        familiesWithOneChild=Family.joins(:members).where(members:{person_type:"child"}).group('family_id').having("count(*)==1")
+        expect(familiesWithOneChild.length).to eq(1)
+    end
+    it 'How Many Families have one child? another way using Person instead' do
         #Group by family_id then filter with child and count==1.
         familiesWithOneChild=Person.where(person_type:"child").group('family_id').having('count(*)==1').count
         expect(familiesWithOneChild.count).to eq(1)
